@@ -1,0 +1,16 @@
+Segregación de interfaces y liskov
+===============================================================================
+
+La interfaz FileSystemItem era demasiado grande y las clases que extendian de ella
+no usaban todos los metodos de la interfaz, por lo que la he separado en interfaces más
+pequeñas.
+
+En este commit, al cambiar la interfaz grande por otras mas pequeñas, tambien se ha
+sustituido los tipos de las clases directory y file al ser instanciadas por
+la clase padre en vez de por la interfaz.
+
+Responsabilidad única
+===============================================================================
+Los metodos que compartian la clase file y directory se han recogido en la clase padre
+y se han extraido los metodos de conversión a un servicio.
+
