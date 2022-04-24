@@ -2,11 +2,8 @@ package com.kreitek.utils;
 
 import com.kreitek.files.Directory;
 import com.kreitek.service.FileManager;
-import com.kreitek.files.File;
-import com.kreitek.files.pathnameFile;
 import com.kreitek.files.FileSystemItemBase;
-import com.kreitek.files.listedFile;
-import com.kreitek.files.fileOperations;
+
 
 public class FileSystemPrinter {
 
@@ -22,7 +19,7 @@ public class FileSystemPrinter {
         System.out.println(message);
 
         if (item instanceof Directory) {
-            for (FileSystemItemBase subitem: item.listFiles()) {
+            for (FileSystemItemBase subitem: item.getFiles()) {
                 FileSystemPrinter.print(subitem, nivel + 1);
             }
         }

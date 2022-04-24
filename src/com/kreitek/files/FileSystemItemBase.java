@@ -51,5 +51,7 @@ public abstract class FileSystemItemBase {
         this.size = size;
     }
 
-    public abstract List<FileSystemItemBase> listFiles();
+    public List<FileSystemItemBase> getFiles() {
+        return files;
+    }
 }

@@ -1,5 +1,5 @@
 package com.kreitek.files;
 
 public interface pathnameFile {
-    String getExtension();
+    String getExtension(File file);
 }
